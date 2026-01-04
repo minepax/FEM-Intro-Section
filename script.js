@@ -1,13 +1,15 @@
 // Code to toggle dropdown menus in nav
 
-const dropDownLinks = document.querySelectorAll('button[aria-controls="nav-sub"]');
+const dropDownLinks = document.querySelectorAll('button[aria-label="Navbar Dropdown Menu Toggle"]');
 
 dropDownLinks.forEach(dropDownLink => {
     dropDownLink.addEventListener('click', () => {
         if(dropDownLink.nextElementSibling.hasAttribute("data-visible")) {
             dropDownLink.setAttribute("aria-expanded", false);
+            dropDownLink.nextElementSibling.setAttribute("aria-hidden", true);
         } else {
             dropDownLink.setAttribute("aria-expanded", true);
+            dropDownLink.nextElementSibling.setAttribute("aria-hidden", false);
         }
         dropDownLink.toggleAttribute("data-rotate");
         dropDownLink.nextElementSibling.toggleAttribute("data-visible");

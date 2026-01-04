@@ -134,7 +134,7 @@ p {text-wrap: pretty;}
         position: relative;
     }
     
-    button[aria-controls="nav-sub"] {
+    button[aria-label="Navbar Dropdown Menu Toggle"] {
         position: relative;
         cursor: pointer;
         display: flex;
